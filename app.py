@@ -2,7 +2,12 @@ from flask import Flask, render_template, request
 import requests
 
 app = Flask(__name__)
-API_KEY = "bc7557afd3839100247c0e503425acbf"  # Your API key
+import os
+
+api_key = os.getenv("API_KEY")
+if not api_key:
+    raise ValueError("API_KEY not found. Did you set it in Render environment variables?")
+
 
 @app.route("/", methods=["GET", "POST"])
 def home():

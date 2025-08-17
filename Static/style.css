@@ -1,0 +1,36 @@
+body {
+    background-image: url("AdobeStock_440069937-scaled.webp");  
+    background-size: cover;
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;  
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1 {
+    color: #bd1515;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.error {
+    color: red;
+}

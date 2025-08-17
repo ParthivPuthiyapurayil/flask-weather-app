@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PPs Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Weather App</h1>
+
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter city name" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if weather and temp %}
+        <h2>Weather in {{ city }}</h2>
+        <p>Condition: {{ weather }}</p>
+        <p>Temperature: {{ temp }}°C</p>
+    {% endif %}
+
+    <footer>
+        <p>&copy; 2025 Weather App | parthivputhiyapurayil@gmail.com</p>
+    </footer>
+</body>
+</html>
